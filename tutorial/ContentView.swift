@@ -10,10 +10,12 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Image(systemName: "person").font(.custom("", size: 40)).bold()
+            Text("Cuenta privada").bold().font(.largeTitle).foregroundColor(.blue)
+            HStack{
+                Text("Cambiar cuenta").foregroundColor(.blue).padding()
+                Image(systemName: "chevron.right").foregroundColor(.blue)
+            }
         }
         .padding()
     }
