@@ -9,15 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "person").font(.custom("", size: 40)).bold()
-            Text("Cuenta privada").bold().font(.largeTitle).foregroundColor(.blue)
-            HStack{
-                Text("Cambiar cuenta").foregroundColor(.blue).padding()
-                Image(systemName: "chevron.right").foregroundColor(.blue)
+        NavigationStack {
+            VStack {
+                Image(systemName: "person").font(.custom("", size: 40)).bold()
+                Text("Cuenta privada").bold().font(.largeTitle).foregroundColor(.blue)
+                NavigationLink{
+                    NewView()
+                } label: {
+                    HStack{
+                        Text("Cambiar cuenta").foregroundColor(.blue).padding()
+                        Image(systemName: "chevron.right").foregroundColor(.blue)
+                    }
+                }
             }
         }
-        .padding()
     }
 }
 
